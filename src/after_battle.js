@@ -1,4 +1,4 @@
-exports = module.exports = after_battle;
+exports.after_battle = after_battle;
 
 function after_battle(character_list) {
 	var alive_character_list = undefined;
@@ -6,7 +6,7 @@ function after_battle(character_list) {
 	// 把死亡了的角色过滤掉
 	alive_character_list = character_list.filter(function(character) {
 		if (!character.is_alive()) {
-			log('[%s] 死亡', character.name);
+			log_battle_detail('[%s] 死亡', character.name);
 			return false;
 		} else {
 			return true;
@@ -15,8 +15,6 @@ function after_battle(character_list) {
 
 	// 活着的角色执行升级操作
 	alive_character_list.forEach(levelUp);
-
-	log('');
 
 	function levelUp(character) {
 		// 计算经验点
@@ -34,9 +32,9 @@ function after_battle(character_list) {
 			character.level += delt_level;
 			character.exp.current = tail_exp;
 
-			log('[%s] 获得了 %s 点经验，升级至 %s 级',  character.name, delt_exp, character.level);
+			log_battle_detail('[%s] 获得了 %s 点经验，升级至 %s 级',  character.name, delt_exp, character.level);
 		} else {
-			log('[%s] 获得了 %s 点经验',  character.name, delt_exp);
+			log_battle_detail('[%s] 获得了 %s 点经验',  character.name, delt_exp);
 		}
 	}
 }

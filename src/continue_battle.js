@@ -1,4 +1,4 @@
-exports = module.exports = continue_battle;
+exports.continue_battle = continue_battle;
 
 function continue_battle(character_list) {
 	// 只要战斗双方都活着，就继续战斗

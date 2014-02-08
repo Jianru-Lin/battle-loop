@@ -1,50 +1,25 @@
-init();
-run();
+var fs = require('fs');
+var path = require('path');
 
-function run() {
-	var count = 1000;
-	while (count--) {
-		var character_list = get_character_list();
+var dir = path.resolve(process.cwd());
 
-		// 做一些战斗前的准备工作（例如回血）
-		before_battle(character_list);
+(function() {
+	var list = fs.readdirSync(dir);
 
-		// 战斗，战斗，至死方休！
-		while (continue_battle(character_list)) {
-			do_battle(character_list);
-		}
+	list = list.filter(function(filename) {
+		return /\.js$/.test(filename);
+	});
 
-		// 做一些战斗后的收尾工作（例如升级、捡装备等）
-		after_battle(character_list);
-	}
-}
+	list.forEach(function(filename) {
+		var fullname = path.resolve(dir, filename);
+		var file_exports = require(fullname);
 
-
-function init() {
-	var fs = require('fs');
-	var path = require('path');
-	var fileList = fs.readdirSync(__dirname);
-
-	// 非 .js 结尾的不要加载
-	// init.js 和 run.js 也不要加载
-	fileList = fileList.filter(function(file) {
-		if (!/\.js$/i.test(file)) {
-			//console.log('not js file: ' + file);
-			return false;
-		} else if (/^run\.js$/i.test(file)) {
-			return false;
-		} else {
-			return true;
+		for (var prop_name in file_exports) {
+			global[prop_name] = file_exports[prop_name];
+			console.log('[load] ' + prop_name);
 		}
 	});
 
-	fileList.forEach(function(file) {
-		var m = require(file);
-		if (m.name) {
-			global[m.name] = m;
-			console.log('success: ' + file);
-		} else {
-			console.log('failure: ' + file);
-		}
-	});	
-}
+	// run global start function
+	start();
+})();

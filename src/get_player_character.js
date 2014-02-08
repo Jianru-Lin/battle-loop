@@ -1,4 +1,4 @@
-exports = module.exports = get_player_character;
+exports.get_player_character = get_player_character;
 
 var player = undefined;
 

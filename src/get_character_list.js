@@ -1,4 +1,4 @@
-exports = module.exports = get_character_list;
+exports.get_character_list = get_character_list;
 
 var character_list = undefined;
 

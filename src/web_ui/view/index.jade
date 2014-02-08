@@ -1,0 +1,18 @@
+doctype html
+html
+	head
+		meta(charset="UTF-8")
+		title= title
+		each css_href in css_href_list
+			link(rel="stylesheet", href=css_href, type="text/css")
+	body
+		h1= app_name
+
+		div#battle_log_list
+
+		// auto generated scripts
+		each script_src in script_src_list
+			script(type="text/javascript", src=script_src)
+
+		// user scripts
+		script(type="text/javascript", src="js/ui.js")

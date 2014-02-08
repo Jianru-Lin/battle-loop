@@ -1,4 +1,4 @@
-exports = module.exports = new_character;
+exports.new_character = new_character;
 
 function new_character() {
 	return new character();

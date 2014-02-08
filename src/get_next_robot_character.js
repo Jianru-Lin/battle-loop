@@ -1,4 +1,4 @@
-exports = module.exports = get_next_robot_character;
+exports.get_next_robot_character = get_next_robot_character;
 
 var robot_id = 0;
 
