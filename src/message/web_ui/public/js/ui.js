@@ -1,17 +1,49 @@
 onload = function() {
-	query_battle_log_and_show_loop();
+	loop(query_battle_log_and_show, 500);
+	loop(query_character_info_and_show, 500);
 }
 
+function loop(func, delay) {
+	loop_once();
+
+	function loop_once() {
+		func(function() {
+			setTimeout(loop_once, delay);
+		});
+	}
+}
+
+/*
 function query_battle_log_and_show_loop() {
 	query_battle_log_and_show(function() {
 		setTimeout(query_battle_log_and_show_loop, 500);
 	});
 }
+*/
 
 function query_battle_log_and_show(cb) {
 	query_battle_log()
 		.success(function(battle_log) {
 			ui_output('battle_log', battle_log);
+			cb();
+		})
+		.failure(function(code, text) {
+			cb();
+		});
+}
+
+/*
+function query_character_info_and_show_loop() {
+	query_character_info_and_show(function() {
+		setTimeout(query_character_info_and_show_loop, 500);
+	});
+}
+*/
+
+function query_character_info_and_show(cb) {
+	query_character_info()
+		.success(function(character_info) {
+			ui_output('character_info', character_info);
 			cb();
 		})
 		.failure(function(code, text) {

@@ -1,7 +1,8 @@
 exports.process_message = process_message;
 
 var action_map = {
-	'query_battle_log': query_battle_log
+	'query_battle_log': query_battle_log,
+	'query_character_info': query_character_info
 }
 
 function process_message(message) {
@@ -26,4 +27,8 @@ function query_battle_log(message) {
 	} else {
 		message.result = battle_log;
 	}
+}
+
+function query_character_info(message) {
+	
 }

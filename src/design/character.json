@@ -1,0 +1,20 @@
+{
+	"properties": [
+		{
+			"name": "hp",
+			"type": "slot",
+		},
+		{
+			"name": "level",
+			"type": "number"
+		},
+		{
+			"name": "exp",
+			"type": "slot"
+		},
+		{
+			"name": "attack",
+			"type": "range",
+		}
+	]
+}

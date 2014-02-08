@@ -10,6 +10,11 @@ api_list.push({
 	args: []
 });
 
+api_list.push({
+	name: 'query_character_info',
+	args: []
+});
+
 function generate_web_api() {
 	var text_block_list = [];
 
@@ -23,7 +28,7 @@ function generate_web_api() {
 
 	var text = text_block_list.join('\n\n');
 
-	fs.writeFileSync(path.resolve(__dirname, 'web_ui/public/js', 'web-api.js'), text, {encoding: 'utf8'});
+	fs.writeFileSync(path.resolve(__dirname, '../web_ui/public/js', 'web-api.js'), text, {encoding: 'utf8'});
 }
 
 function make_arg_list(api) {

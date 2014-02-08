@@ -1,11 +1,11 @@
-exports.receive_message_from_web = receive_message_from_web;
+exports.receive_message = receive_message;
 
 var express = require('express');
 var path = require('path');
 
 var app = undefined;
 
-function receive_message_from_web(message_handler) {
+function receive_message(message_handler) {
 	if (!app) {
 		generate_web_api();
 
