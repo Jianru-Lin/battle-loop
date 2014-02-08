@@ -1,9 +1,29 @@
 var fs = require('fs');
-var path = require('path');
+var resolve = require('path').resolve;
 
-var dir = path.resolve(process.cwd());
+// get current working directory
+var cwd = resolve(process.cwd());
 
-(function() {
+// enum all the directories that will be loaded
+var dir_list = [
+	cwd, 
+	resolve(cwd, 'battle'), 
+	resolve(cwd, 'battle/character'),
+	resolve(cwd, 'data'),
+	resolve(cwd, 'message'),
+	resolve(cwd, 'message/generate'),
+	resolve(cwd, 'message/log'),
+];
+
+// do load
+dir_list.forEach(function(dir) {
+	load(dir);
+});
+
+// run global start function
+start();
+
+function load(dir) {
 	var list = fs.readdirSync(dir);
 
 	list = list.filter(function(filename) {
@@ -11,7 +31,7 @@ var dir = path.resolve(process.cwd());
 	});
 
 	list.forEach(function(filename) {
-		var fullname = path.resolve(dir, filename);
+		var fullname = resolve(dir, filename);
 		var file_exports = require(fullname);
 
 		for (var prop_name in file_exports) {
@@ -19,7 +39,4 @@ var dir = path.resolve(process.cwd());
 			console.log('[load] ' + prop_name);
 		}
 	});
-
-	// run global start function
-	start();
-})();
+}
