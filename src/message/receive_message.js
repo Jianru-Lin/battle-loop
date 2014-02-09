@@ -41,8 +41,6 @@ function receive_message(message_handler) {
 
 function index_page(req, res) {
 	var data = {
-		title: 'battle loop',
-		app: 'battle loop',
 		css_href_list: [],
 		script_src_list: ['js/json-request.js', 'js/web-api.js']
 	};

@@ -1,0 +1,40 @@
+/* display */
+a.dashboard-nav-item {
+	display: inline-block;
+}
+
+/* text */
+a.dashboard-nav-item {
+	text-decoration: none;
+	color: inherit;
+	line-height: 40px;
+	text-align: center;
+}
+
+a.dashboard-nav-item:hover {
+	color: black;
+}
+
+a.dashboard-nav-item.current {
+	color: white;
+}
+
+/* border */
+a.dashboard-nav-item {
+	border-right: 1px solid black;
+}
+
+/* width, height */
+a.dashboard-nav-item {
+	width: 80px;
+	height: 40px;
+}
+
+/* background */
+a.dashboard-nav-item:hover {
+	background: #eee;
+}
+
+a.dashboard-nav-item.current {
+	background: black;
+}

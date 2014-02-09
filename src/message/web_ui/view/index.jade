@@ -2,19 +2,36 @@ doctype html
 html
 	head
 		meta(charset="UTF-8")
-		title= title
+		title battle loop
+		
+		// auto generated styles
 		each css_href in css_href_list
 			link(rel="stylesheet", href=css_href, type="text/css")
+
+		// user styles
+		link(rel="stylesheet", href="css/dashboard.css", type="text/css")
+		link(rel="stylesheet", href="css/dashboard-nav-item.css", type="text/css")
+		link(rel="stylesheet", href="css/layer.css", type="text/css")
 	body
-		h1= app_name
-
-		div#character_info
-
-		div#battle_log_list
+		div.dashboard
+			div.dashboard-nav
+				a.dashboard-nav-item.current(href="javascript:show_layer(0);") 战斗
+				a.dashboard-nav-item(href="javascript:show_layer(1);") 属性
+				a.dashboard-nav-item(href="javascript:show_layer(2);") 装备
+				a.dashboard-nav-item(href="javascript:show_layer(3);") 地图
+			div.dashboard-content
+				div.layer
+					h1 layer 1
+				div.layer.hide
+					h1 layer 2
+				div.layer.hide
+					h1 layer 3
+				div.layer.hide
+					h1 layer 4
 
 		// auto generated scripts
 		each script_src in script_src_list
 			script(type="text/javascript", src=script_src)
 
 		// user scripts
-		script(type="text/javascript", src="js/ui.js")
+		script(type="text/javascript", src="js/dashboard.js")
