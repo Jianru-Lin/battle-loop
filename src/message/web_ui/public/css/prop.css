@@ -1,0 +1,55 @@
+/* position */
+.prop {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.prop > .hbox.left {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.prop > .hbox.middle {
+	position: absolute;
+	left: 34%;
+	top: 0;
+	bottom: 0;
+}
+
+.prop > .hbox.right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/* width, height */
+.prop > .hbox.left {
+	width: 34%;
+}
+
+.prop > .hbox.middle {
+	width: 33%;
+}
+
+.prop > .hbox.right {
+	width: 33%;
+}
+
+/* background */
+.prop > .hbox.left {
+	background: white;
+}
+
+.prop > .hbox.middle {
+	background: grayp;
+}
+
+.prop > .hbox.right {
+	background: blue;
+}

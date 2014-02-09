@@ -1,0 +1,40 @@
+/* position */
+.map {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.map > .hbox.left {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.map > .hbox.right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/* width, height */
+.map > .hbox.left {
+	width: 66%;
+}
+
+.map > .hbox.right {
+	width: 34%;
+}
+
+/* background */
+.map > .hbox.left {
+	background: blue;
+}
+
+.map > .hbox.right {
+	background: green;
+}

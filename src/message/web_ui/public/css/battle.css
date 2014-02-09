@@ -1,0 +1,47 @@
+/* position */
+.battle {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.battle > .hbox.left {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.battle > .hbox.right {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+/* width, height */
+.battle > .hbox.left {
+	width: 34%;
+}
+
+.battle > .hbox.right {
+	width: 66%;
+}
+
+/* border */
+.battle > .hbox.right {
+	border-left: 1px solid black;
+}
+
+/* background */
+/*
+.battle > .hbox.left {
+	background: green;
+}
+
+.battle > .hbox.right {
+	background: red;	
+}
+*/

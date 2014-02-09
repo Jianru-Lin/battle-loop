@@ -1,0 +1,55 @@
+/* position */
+.equip {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.equip > .hbox.left {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.equip > .hbox.middle {
+	position: absolute;
+	left: 34%;
+	top: 0;
+	bottom: 0;
+}
+
+.equip > .hbox.right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/* width, height */
+.equip > .hbox.left {
+	width: 34%;
+}
+
+.equip > .hbox.middle {
+	width: 33%;
+}
+
+.equip > .hbox.right {
+	width: 33%;
+}
+
+/* background */
+.equip > .hbox.left {
+	background: gray;
+}
+
+.equip > .hbox.middle {
+	background: silver;
+}
+
+.equip > .hbox.right {
+	background: white;
+}

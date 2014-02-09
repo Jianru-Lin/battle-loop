@@ -12,6 +12,12 @@ html
 		link(rel="stylesheet", href="css/dashboard.css", type="text/css")
 		link(rel="stylesheet", href="css/dashboard-nav-item.css", type="text/css")
 		link(rel="stylesheet", href="css/layer.css", type="text/css")
+		link(rel="stylesheet", href="css/hbox.css", type="text/css")
+		link(rel="stylesheet", href="css/battle.css", type="text/css")
+		link(rel="stylesheet", href="css/prop.css", type="text/css")
+		link(rel="stylesheet", href="css/equip.css", type="text/css")
+		link(rel="stylesheet", href="css/map.css", type="text/css")
+
 	body
 		div.dashboard
 			div.dashboard-nav
@@ -21,13 +27,13 @@ html
 				a.dashboard-nav-item(href="javascript:show_layer(3);") 地图
 			div.dashboard-content
 				div.layer
-					h1 layer 1
+					include include/battle.jade
 				div.layer.hide
-					h1 layer 2
+					include include/prop.jade
 				div.layer.hide
-					h1 layer 3
+					include include/equip.jade
 				div.layer.hide
-					h1 layer 4
+					include include/map.jade
 
 		// auto generated scripts
 		each script_src in script_src_list
