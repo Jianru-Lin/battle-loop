@@ -13,6 +13,7 @@ html
 		link(rel="stylesheet", href="css/dashboard-nav-item.css", type="text/css")
 		link(rel="stylesheet", href="css/layer.css", type="text/css")
 		link(rel="stylesheet", href="css/hbox.css", type="text/css")
+		link(rel="stylesheet", href="css/list.css", type="text/css")
 		link(rel="stylesheet", href="css/battle.css", type="text/css")
 		link(rel="stylesheet", href="css/prop.css", type="text/css")
 		link(rel="stylesheet", href="css/prop-box.css", type="text/css")
@@ -25,15 +26,15 @@ html
 		div.dashboard
 			div.dashboard-nav
 				a.dashboard-nav-item(href="javascript:show_layer(0);") 战斗
-				a.dashboard-nav-item.current(href="javascript:show_layer(1);") 属性
-				a.dashboard-nav-item(href="javascript:show_layer(2);") 装备
+				a.dashboard-nav-item(href="javascript:show_layer(1);") 属性
+				a.dashboard-nav-item.current(href="javascript:show_layer(2);") 装备
 				a.dashboard-nav-item(href="javascript:show_layer(3);") 地图
 			div.dashboard-content
 				div.layer.hide
 					include include/battle.jade
-				div.layer
-					include include/prop.jade
 				div.layer.hide
+					include include/prop.jade
+				div.layer
 					include include/equip.jade
 				div.layer.hide
 					include include/map.jade

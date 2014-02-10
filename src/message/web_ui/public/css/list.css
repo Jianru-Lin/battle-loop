@@ -1,0 +1,112 @@
+/* NAME-VALUE-LIST */
+
+/* list */
+ul.name-value-list {
+	list-style-type: none;
+}
+
+/* margin, padding */
+ul.name-value-list {
+	margin: 10px 0 0 0;
+	padding: 0;
+}
+
+ul.name-value-list > li {
+	padding-left: 10px;
+	margin-bottom: 8px;
+}
+
+/* width, height */
+ul.name-value-list .name {
+	display: inline-block;
+	min-width: 90px;
+}
+
+/* SELECT-LIST */
+
+/* list */
+ul.select-list {
+	list-style-type: none;
+}
+
+/* position */
+ul.select-list > li {
+	position: relative;
+}
+
+ul.select-list > li .icon {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+
+ul.select-list > li .name {
+	position: absolute;
+	left: 46px;
+	top: 0px;
+}
+
+ul.select-list > li .operate {
+	position: absolute;
+	right: 10px;
+	top: 0px;
+}
+
+
+/* margin, padding */
+ul.select-list {
+	margin: 10px 0 0 0;
+	padding: 0;
+}
+
+ul.select-list > li {
+	padding-left: 10px;
+}
+
+/* width, height */
+ul.select-list > li {
+	height: 48px;
+}
+
+ul.select-list > li.select-list-head {
+	height: auto;
+}
+
+ul.select-list > li .icon {
+	width: 24px;
+	height: 24px;
+}
+
+
+/* border */
+ul.select-list > li.select-list-head {
+	border-top: 1px solid black;
+}
+
+ul.select-list > li {
+	border-top: 1px solid black;
+}
+
+ul.select-list > li:last-child {
+	border-bottom: 1px solid black;
+}
+
+ul.select-list > li .icon {
+	border: 1px solid black;
+}
+
+
+/* text */
+ul.select-list > li {
+	line-height: 48px;
+}
+
+ul.select-list > li.select-list-head {
+	line-height: normal;
+	color: white;
+}
+
+/* background */
+ul.select-list > li.select-list-head {
+	background: black;
+}
