@@ -2,7 +2,8 @@ var fs = require('fs');
 var resolve = require('path').resolve;
 
 // get current working directory
-var cwd = resolve(process.cwd());
+//var cwd = resolve(process.cwd());
+var cwd = resolve(__dirname, 'src');
 
 // enum all the directories that will be loaded
 var dir_list = [

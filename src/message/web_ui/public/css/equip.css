@@ -16,7 +16,7 @@
 
 .equip > .hbox.middle {
 	position: absolute;
-	left: 34%;
+	left: 327px;
 	top: 0;
 	bottom: 0;
 }
@@ -30,18 +30,19 @@
 
 /* width, height */
 .equip > .hbox.left {
-	width: 34%;
+	width: 327px;
 }
 
 .equip > .hbox.middle {
-	width: 33%;
+	width: 327px;
 }
 
 .equip > .hbox.right {
-	width: 33%;
+	width: 326px;
 }
 
 /* background */
+/*
 .equip > .hbox.left {
 	background: gray;
 }
@@ -52,4 +53,14 @@
 
 .equip > .hbox.right {
 	background: white;
+}
+*/
+
+/* border */
+.equip > .hbox.middle {
+	border-left: 1px solid black;
+}
+
+.equip > .hbox.right {
+	border-left: 1px solid black;
 }
