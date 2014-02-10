@@ -16,7 +16,7 @@
 
 .prop > .hbox.middle {
 	position: absolute;
-	left: 34%;
+	left: 327px;
 	top: 0;
 	bottom: 0;
 }
@@ -30,18 +30,28 @@
 
 /* width, height */
 .prop > .hbox.left {
-	width: 34%;
+	width: 327px;
 }
 
 .prop > .hbox.middle {
-	width: 33%;
+	width: 327px;
 }
 
 .prop > .hbox.right {
-	width: 33%;
+	width: 326px;
+}
+
+/* border */
+.prop > .hbox.middle {
+	border-left: 1px solid black;
+}
+
+.prop > .hbox.right {
+	border-left: 1px solid black;
 }
 
 /* background */
+/*
 .prop > .hbox.left {
 	background: white;
 }
@@ -53,3 +63,4 @@
 .prop > .hbox.right {
 	background: blue;
 }
+*/
