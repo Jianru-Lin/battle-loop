@@ -20,6 +20,7 @@ html
 		link(rel="stylesheet", href="css/ability-box.css", type="text/css")
 		link(rel="stylesheet", href="css/title-box.css", type="text/css")
 		link(rel="stylesheet", href="css/equip.css", type="text/css")
+		link(rel="stylesheet", href="css/pet.css", type="text/css")
 		link(rel="stylesheet", href="css/map.css", type="text/css")
 
 	body
@@ -27,8 +28,9 @@ html
 			div.dashboard-nav
 				a.dashboard-nav-item(href="javascript:show_layer(0);") 战斗
 				a.dashboard-nav-item(href="javascript:show_layer(1);") 属性
-				a.dashboard-nav-item.current(href="javascript:show_layer(2);") 装备
-				a.dashboard-nav-item(href="javascript:show_layer(3);") 地图
+				a.dashboard-nav-item(href="javascript:show_layer(2);") 装备
+				a.dashboard-nav-item.current(href="javascript:show_layer(3);") 宠物
+				a.dashboard-nav-item(href="javascript:show_layer(4);") 地图
 			div.dashboard-content
 				div.layer.hide
 					include include/battle.jade
@@ -36,6 +38,8 @@ html
 					include include/prop.jade
 				div.layer
 					include include/equip.jade
+				div.layer
+					include include/pet.jade
 				div.layer.hide
 					include include/map.jade
 

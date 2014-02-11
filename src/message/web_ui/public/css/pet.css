@@ -1,0 +1,51 @@
+/* position */
+.pet {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.pet > .hbox.left {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.pet > .hbox.middle {
+	position: absolute;
+	left: 327px;
+	top: 0;
+	bottom: 0;
+}
+
+.pet > .hbox.right {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/* width, height */
+.pet > .hbox.left {
+	width: 327px;
+}
+
+.pet > .hbox.middle {
+	width: 327px;
+}
+
+.pet > .hbox.right {
+	width: 326px;
+}
+
+/* border */
+.pet > .hbox.middle {
+	border-left: 1px solid black;
+}
+
+.pet > .hbox.right {
+	border-left: 1px solid black;
+}

@@ -8,9 +8,17 @@
 	margin-top: 10px;
 }
 
+.hbox-sub-title .postfix {
+	margin-left: 10px;
+}
+
 /* text, font */
 .hbox-title {
 	font-weight: normal;
+}
+
+.hbox-sub-title .postfix {
+	font-size: 0.75em;
 }
 
 /* overflow */
