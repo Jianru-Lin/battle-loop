@@ -23,18 +23,14 @@
 
 /* width, height */
 .map > .hbox.left {
-	width: 66%;
+	width: 654px;
 }
 
 .map > .hbox.right {
-	width: 34%;
+	width: 327px;
 }
 
-/* background */
-.map > .hbox.left {
-	background: blue;
-}
-
+/* border */
 .map > .hbox.right {
-	background: green;
+	border-left: 1px solid black;
 }

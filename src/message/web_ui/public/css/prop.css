@@ -49,18 +49,3 @@
 .prop > .hbox.right {
 	border-left: 1px solid black;
 }
-
-/* background */
-/*
-.prop > .hbox.left {
-	background: white;
-}
-
-.prop > .hbox.middle {
-	background: grayp;
-}
-
-.prop > .hbox.right {
-	background: blue;
-}
-*/
