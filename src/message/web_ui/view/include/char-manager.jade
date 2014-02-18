@@ -1,78 +1,82 @@
-h1 角色列表
-table
-	thead
-		tr
-			th 名字
-			th 种族
-			th 等级
-			th 操作
-	tbody
-		tr
-			td 撒家这辈子值了
-			td 精灵
-			td 15
-			td
-				a(href="#") 读取
-				a(href="#") 删除
-		tr
-			td 绝代双胶
-			td 矮人
-			td 22
-			td
-				a(href="#") 读取
-				a(href="#") 删除
-a(href="#") 创建新角色
+div.char-list
+	h1 角色列表
+		a.create-char-bt(href="#") +创建新角色
+	table
+		thead
+			tr
+				th 名字
+				th 种族
+				th 等级
+				th 操作
+		tbody
+			tr
+				td 撒家这辈子值了
+				td 精灵
+				td 15
+				td
+					a(href="#") 读取
+					span /
+					a(href="#") 删除
+			tr
+				td 绝代双胶
+				td 矮人
+				td 22
+				td
+					a(href="#") 读取
+					span /
+					a(href="#") 删除
 
-h1 创建新角色
-span 角色名称
-input(type="text")
-select
-	option 人类
-	option 精灵
-	option 巨人
-	option 不死
-	option 矮人
-select
-	option 10岁
-	option 11岁
-	option 12岁
-	option 13岁
-	option 14岁
-	option 15岁
-	option 16岁
-	option 17岁
-button 创建
-br
-table
-	thead
-		tr
-			th 属性名
-			th 初始值
-			th 每成长1岁
-			th 每升高1级
-	tbody
-		tr
-			td STR
-			td 26
-			td +2
-			td +0.5
-		tr
-			td DEX
-			td 27
-			td +3
-			td +0.75
-		tr
-			td INT
-			td 26
-			td +2
-			td +0.25
-		tr
-			td WILL
-			td 38
-			td +3
-			td +0.75
-		tr
-			td LUCK
-			td 16
-			td +0
-			td +0
+div.create-char.hide
+	h1 创建新角色
+	span 角色名称
+	input(type="text")
+	select
+		option 人类
+		option 精灵
+		option 巨人
+		option 不死
+		option 矮人
+	select
+		option 10岁
+		option 11岁
+		option 12岁
+		option 13岁
+		option 14岁
+		option 15岁
+		option 16岁
+		option 17岁
+	button 创建
+	br
+	table
+		thead
+			tr
+				th 属性名
+				th 初始值
+				th 每成长1岁
+				th 每升高1级
+		tbody
+			tr
+				td STR
+				td 26
+				td +2
+				td +0.5
+			tr
+				td DEX
+				td 27
+				td +3
+				td +0.75
+			tr
+				td INT
+				td 26
+				td +2
+				td +0.25
+			tr
+				td WILL
+				td 38
+				td +3
+				td +0.75
+			tr
+				td LUCK
+				td 16
+				td +0
+				td +0

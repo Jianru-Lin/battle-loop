@@ -1,0 +1,58 @@
+.char-manager h1 {
+	margin: 0;
+	padding: 20px 20px 15px 20px;
+}
+
+.char-manager table {
+	border-spacing: 0;
+	width: 980px;
+	margin: 0 auto;
+	border: solid 1px black;
+	border-bottom: none;
+}
+
+.char-manager table th {
+	width: 25%;
+}
+
+.char-manager table th {
+	background-color: black;
+	color: white;
+	font-weight: normal;
+	padding: 10px;
+	border-right: solid 1px black;
+	border-bottom: solid 1px black;
+}
+
+.char-manager table th:first-child {
+	background-color: rgb(199, 0, 0);
+}
+
+.char-manager table th:last-child {
+	border-right: none;
+}
+
+.char-manager table td {
+	text-align: center;
+	padding: 10px;
+	border-right: solid 1px black;
+	border-bottom: solid 1px black;
+}
+
+.char-manager table td:last-child {
+	border-right: none;
+}
+
+.char-list.hide {
+	display: none;
+}
+
+.create-char.hide {
+	display: none;
+}
+
+a.create-char-bt {
+	font-size: .5em;
+	font-weight: normal;
+	margin: 0 20px;
+}
