@@ -8,8 +8,18 @@ html
 		each css_href in css_href_list
 			link(rel="stylesheet", href=css_href, type="text/css")
 
-		// user styles
+		// general style
 		link(rel="stylesheet", href="css/font.css", type="text/css")
+		link(rel="stylesheet", href="css/border.css", type="text/css")
+		link(rel="stylesheet", href="css/top-box.css", type="text/css")
+
+		// style in auth
+		link(rel="stylesheet", href="css/auth.css", type="text/css")
+
+		// style in char-manager
+		link(rel="stylesheet", href="css/char-manager.css", type="text/css")
+
+		// style in dashboard
 		link(rel="stylesheet", href="css/dashboard.css", type="text/css")
 		link(rel="stylesheet", href="css/dashboard-nav-item.css", type="text/css")
 		link(rel="stylesheet", href="css/layer.css", type="text/css")
@@ -25,14 +35,20 @@ html
 		link(rel="stylesheet", href="css/map.css", type="text/css")
 
 	body.font-hei
-		div.dashboard
-			div.dashboard-nav
+		div.top-box.auth.border.hide
+			include include/auth.jade
+
+		div.top-box.char-manager.border
+			include include/char-manager.jade
+
+		div.top-box.dashboard.border.hide
+			div.dashboard-nav.border
 				a.dashboard-nav-item(href="javascript:show_layer(0);") 战斗
 				a.dashboard-nav-item(href="javascript:show_layer(1);") 属性
 				a.dashboard-nav-item(href="javascript:show_layer(2);") 装备
 				a.dashboard-nav-item.current(href="javascript:show_layer(3);") 宠物
 				a.dashboard-nav-item(href="javascript:show_layer(4);") 地图
-			div.dashboard-content
+			div.dashboard-content.border
 				div.layer.hide
 					include include/battle.jade
 				div.layer.hide

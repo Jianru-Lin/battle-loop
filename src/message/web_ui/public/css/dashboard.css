@@ -5,19 +5,11 @@ html, body {
 	padding: 0;
 }
 
-.dashboard {
-	margin: 40px auto 0 auto;
-}
-
 .dashboard-nav, .dashboard-content {
 	margin: 8px;
 }
 
 /* width, height */
-
-.dashboard {
-	width: 1000px;
-}
 
 .dashboard-nav {
 	height: 40px;
@@ -25,12 +17,6 @@ html, body {
 
 .dashboard-content {
 	height: 500px;
-}
-
-/* border */
-
-.dashboard, .dashboard-nav, .dashboard-content {
-	border: 1px solid black;
 }
 
 /* position */

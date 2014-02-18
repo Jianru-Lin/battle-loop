@@ -1,0 +1,19 @@
+/* margin, padding */
+.top-box {
+	margin: 40px auto 0 auto;
+}
+
+/* width, height */
+.top-box {
+	width: 1000px;
+	height: 568px;
+}
+
+/* visibility */
+
+.top-box.hide {
+	visibility: hidden;
+	margin: 0;
+	width: 0;
+	height: 0;
+}
